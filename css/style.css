@@ -97,3 +97,12 @@ footer {
 .scrollToTop:hover {
     background-color: rgba(255, 250, 232, 1.0);
 }
+.profile-photo {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 150px;  /* 你可以根据需要调整大小 */
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.5);
+}
