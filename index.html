@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李子贺的个人博客</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script>
+	    // 获取返回顶部按钮
+	    const scrollToTopBtn = document.getElementById('scrollToTop');
+	
+	    // 当用户滚动时显示按钮
+	    window.onscroll = function() {
+	        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+	            scrollToTopBtn.style.display = "block";
+	        } else {
+	            scrollToTopBtn.style.display = "none";
+	        }
+	    };
+	
+	    // 当用户点击按钮时，返回顶部
+	    scrollToTopBtn.onclick = function() {
+	        document.body.scrollTop = 0; // 对于 Safari
+	        document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
+	    };
+	</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>李子贺的个人博客</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#projects">我的项目</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>关于我</h2>
+			<h1>
+				<p>熟悉MySql数据库和SQL语句<br />熟练掌握HTML，CSS，JavaScript前端技术。了解React，Vue框架。<br />熟练掌握软件测试理论和实践，高效编写测试用例和测试报告，
+				独立搭建测试框架环境，完成压力测试，接口测试，缺陷定位与管理，自动化测试</p>
+			</h1>
+            
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>我的项目</h2>
+            <ul class="project-list">
+                <li>
+                    <h3>个人博客网站</h3>
+                    <p>使用 HTML5，CSS3，JavaScript 搭建的个人博客。</p>
+                </li>
+                <li>
+                    <h3>TP商城测试</h3>
+                    <p>对商城需求分析，其次编写测试用例，使用python+selenium搭建测试框架，导入测试用例进行Web自动化测试</p>
+                </li>
+                <!-- <li>
+                    <h3>实时聊天应用</h3>
+                    <p>基于 WebSocket 技术的聊天应用，提供消息实时推送功能。</p>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <p>GitHub: <a href="https://github.com/lzh-331" target="_blank">github.com/lzh-331</a></p>
+            <p>邮箱: <a href="mailto:lizihe0331@163.com">lizihe0331@163.com</a></p>
+            <p>微信: jVING9</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 李子贺. 保留所有权利。</p>
+        </div>
+    </footer>
+	<button id="scrollToTop" class="scrollToTop">返回顶部</button>
+</body>
+</html>
