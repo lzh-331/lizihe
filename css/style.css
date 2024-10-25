@@ -112,3 +112,11 @@ footer {
     background-color: rgba(0, 255, 204, 0.1);
     border-left: 4px solid rgba(0, 255, 204, 0.5);
 }
+.project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* 居中图片 */
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.5);
+    border-radius: 10px;
+}
