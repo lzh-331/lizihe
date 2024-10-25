@@ -23,6 +23,14 @@
 	        document.body.scrollTop = 0; // 对于 Safari
 	        document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
 	    };
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        if (details.style.display === "none") {
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    }
 	</script>
 </head>
 <body>
@@ -45,8 +53,8 @@
 		        <img src="images/profile.jpg" alt="李子贺的证件照" class="profile-photo">
 
 			<h1>
-				<p>熟悉MySql数据库和SQL语句<br />熟练掌握HTML，CSS，JavaScript前端技术。了解React，Vue框架。<br />熟练掌握软件测试理论和实践，高效编写测试用例和测试报告，
-				独立搭建测试框架环境，完成压力测试，接口测试，缺陷定位与管理，自动化测试</p>
+				<p>熟悉MySql数据库和SQL语句<br />掌握HTML，CSS，JavaScript技术。了解React，Vue框架。<br />掌握软件测试理论和实践，高效编写测试用例和测试报告，
+				独立搭建测试环境，完成压力测试，接口测试，缺陷定位与管理，自动化测试</p>
 			</h1>
             
         </div>
@@ -59,10 +67,12 @@
                 <li>
                     <h3>个人博客网站</h3>
                     <p>使用 HTML5，CSS3，JavaScript 搭建的个人博客。</p>
+			<a href="project1.html" class="btn">查看详情</a>
                 </li>
                 <li>
                     <h3>TP商城测试</h3>
                     <p>对商城需求分析，其次编写测试用例，使用python+selenium搭建测试框架，导入测试用例进行Web自动化测试</p>
+			 <a href="project2.html" class="btn">查看详情</a>
                 </li>
                 <!-- <li>
                     <h3>实时聊天应用</h3>
