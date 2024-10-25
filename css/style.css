@@ -150,3 +150,23 @@ footer {
     width: 120px;
     text-align: center;
 }
+/*技术栈和亮点*/
+ .circle-module {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px; /* 可以根据需要调整宽度 */
+            height: 100px; /* 可以根据需要调整高度 */
+            border: 2px solid #333; /* 边框颜色和宽度 */
+            border-radius: 50%; /* 创建圆形 */
+            background-color: #fff; /* 背景颜色 */
+            color: #333; /* 文字颜色 */
+            font-size: 16px; /* 文字大小 */
+            line-height: 1.5; /* 行高 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+        }
+
+    .circle-module p {
+            margin: 0; /* 去掉段落的默认外边距 */
+            text-align: center; /* 文字居中对齐 */
+        }
