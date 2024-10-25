@@ -151,13 +151,39 @@ footer {
     text-align: center;
 }
 /*技术栈和亮点*/
- .circle-text {
-            display: inline-block;
-            padding: 10px 20px; /* 调整内边距以适应文字长度 */
-            border: 2px solid #333; /* 边框颜色和宽度 */
-            border-radius: 50%; /* 创建圆形 */
-            background-color: #fff; /* 背景颜色 */
-            color: #333; /* 文字颜色 */
-            font-size: 16px; /* 文字大小 */
-            line-height: 1.5; /* 行高 */
-        }
+ /* 为文字模块添加边框和圆角 */
+.project-overview, .project-tech {
+    background-color: #252525;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 3px solid #00ffff; /* 青绿色的赛博朋克风边框 */
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4); /* 添加阴影增强立体感 */
+}
+
+/* 调整标题的样式 */
+h2 {
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    position: relative;
+}
+
+/* 可选：为标题增加下划线效果 */
+h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #00ffff;
+    margin: 10px auto 0;
+}
+
+/* 容器内部文字排版优化 */
+p, ul {
+    font-size: 1.1em;
+    line-height: 1.7;
+    padding: 10px 0;
+    text-align: justify;
+}
