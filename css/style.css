@@ -106,3 +106,9 @@ footer {
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 255, 204, 0.5);
 }
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0, 255, 204, 0.1);
+    border-left: 4px solid rgba(0, 255, 204, 0.5);
+}
