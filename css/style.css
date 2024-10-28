@@ -21,16 +21,18 @@ body {
 /* 单个樱花样式 */
 .sakura {
     position: absolute;
-    background-color: pink;
-    width: 12px;
-    height: 12px;
+    width: 0;
+    height: 0;
     border-radius: 50%;
+    border: 8px solid pink; /* 颜色为粉色 */
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(45deg); /* 调整角度，类似花瓣 */
+    animation: fall linear infinite;
     opacity: 0.8;
     box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
-    animation: fall linear infinite;
-    transform-origin: center;
-    will-change: transform;
 }
+
 
 /* 樱花下落和旋转的动画 */
 @keyframes fall {
