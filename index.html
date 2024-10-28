@@ -34,8 +34,6 @@
 	</script>
 </head>
 <body>
-	<div class="sakura-container"></div>
-
     <header>
         <div class="container">
             <h1>李子贺的个人博客</h1>
@@ -100,25 +98,5 @@
         </div>
     </footer>
 <!-- 	<button id="scrollToTop" class="scrollToTop">返回顶部</button> -->
-	<script>
-    // 樱花数量
-    const sakuraCount = 50;
-    const container = document.querySelector(".sakura-container");
-
-    // 创建樱花元素
-    for (let i = 0; i < sakuraCount; i++) {
-        const sakura = document.createElement("div");
-        sakura.className = "sakura";
-        
-        // 随机大小、位置、和动画时间
-        sakura.style.left = `${Math.random() * 100}vw`;
-        sakura.style.width = `${Math.random() * 20 + 8}px`;
-        sakura.style.height = sakura.style.width;
-        sakura.style.animationDuration = `${Math.random() * 5 + 5}s`;
-        sakura.style.animationDelay = `${Math.random() * 5}s`;
-
-        container.appendChild(sakura);
-    }
-</script>
 </body>
 </html>
