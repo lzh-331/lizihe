@@ -1,14 +1,14 @@
-/* 背景设置 */
+/* 基础背景设置 */
 body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    background: #000;
+    background: linear-gradient(to bottom, #fdfbfb, #ebedee);
     position: relative;
 }
 
-/* 粒子容器 */
-.particle-container {
+/* 樱花容器样式 */
+.sakura-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,30 +18,34 @@ body {
     z-index: -1;
 }
 
-/* 单个粒子的样式 */
-.particle {
+/* 单个樱花样式 */
+.sakura {
     position: absolute;
-    background: #00ffff; /* 青色的赛博朋克风粒子 */
+    background-color: pink;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    animation: drift 10s infinite linear;
-    opacity: 0.6;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+    animation: fall linear infinite;
+    transform-origin: center;
+    will-change: transform;
 }
 
-/* 粒子漂浮动画 */
-@keyframes drift {
+/* 樱花下落和旋转的动画 */
+@keyframes fall {
     0% {
-        transform: translateY(0) translateX(0) scale(1);
-        opacity: 0.5;
+        transform: translateY(0) rotate(0deg) translateX(0);
     }
     50% {
-        transform: translateY(-200px) translateX(50px) scale(1.2);
-        opacity: 1;
+        transform: translateY(50vh) rotate(180deg) translateX(20px);
     }
     100% {
-        transform: translateY(-400px) translateX(-50px) scale(0.8);
-        opacity: 0.5;
+        transform: translateY(100vh) rotate(360deg) translateX(-20px);
+        opacity: 0.6;
     }
 }
+
 
 * {
     margin: 0;
