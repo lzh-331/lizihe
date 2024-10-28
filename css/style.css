@@ -9,15 +9,16 @@ body {
 
 /* 樱花容器样式 */
 .sakura-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
-    pointer-events: none; /* 确保容器不阻挡滚动 */
+    pointer-events: none; /* 确保背景容器不影响交互 */
 }
+
 
 /* 单个樱花样式 */
 .sakura {
