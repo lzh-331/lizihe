@@ -16,6 +16,7 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: -1;
+    pointer-events: none; /* 确保容器不阻挡滚动 */
 }
 
 /* 单个樱花样式 */
