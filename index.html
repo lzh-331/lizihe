@@ -99,25 +99,25 @@
         </div>
     </footer>
 	<button id="scrollToTop" class="scrollToTop">返回顶部</button>
+	<div class="sakura-container"></div>
 	<script>
-    // 粒子数量
-    const particleCount = 100;
-    const container = document.createElement("div");
-    container.className = "particle-container";
-    document.body.appendChild(container);
+    // 樱花数量
+    const sakuraCount = 50;
+    const container = document.querySelector(".sakura-container");
 
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement("div");
-        particle.className = "particle";
+    // 创建樱花元素
+    for (let i = 0; i < sakuraCount; i++) {
+        const sakura = document.createElement("div");
+        sakura.className = "sakura";
         
-        // 随机大小和位置
-        particle.style.width = `${Math.random() * 5 + 2}px`;
-        particle.style.height = particle.style.width;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.animationDuration = `${Math.random() * 20 + 5}s`;
+        // 随机大小、位置、和动画时间
+        sakura.style.left = `${Math.random() * 100}vw`;
+        sakura.style.width = `${Math.random() * 20 + 8}px`;
+        sakura.style.height = sakura.style.width;
+        sakura.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        sakura.style.animationDelay = `${Math.random() * 5}s`;
 
-        container.appendChild(particle);
+        container.appendChild(sakura);
     }
 </script>
 
