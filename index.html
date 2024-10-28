@@ -99,5 +99,27 @@
         </div>
     </footer>
 	<button id="scrollToTop" class="scrollToTop">返回顶部</button>
+	<script>
+    // 粒子数量
+    const particleCount = 100;
+    const container = document.createElement("div");
+    container.className = "particle-container";
+    document.body.appendChild(container);
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        
+        // 随机大小和位置
+        particle.style.width = `${Math.random() * 5 + 2}px`;
+        particle.style.height = particle.style.width;
+        particle.style.top = `${Math.random() * 100}vh`;
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.animationDuration = `${Math.random() * 20 + 5}s`;
+
+        container.appendChild(particle);
+    }
+</script>
+
 </body>
 </html>
