@@ -6,28 +6,6 @@
     <title>李子贺的个人博客</title>
     <link rel="stylesheet" href="css/style.css">
 	<script>
-		 body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        .animated-background {
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #feb47b);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-	    // 获取返回顶部按钮
-	    const scrollToTopBtn = document.getElementById('scrollToTop');
-	
 	    // 当用户滚动时显示按钮
 	    window.onscroll = function() {
 	        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -35,12 +13,6 @@
 	        } else {
 	            scrollToTopBtn.style.display = "none";
 	        }
-	    };
-	
-	    // 当用户点击按钮时，返回顶部
-	    scrollToTopBtn.onclick = function() {
-	        document.body.scrollTop = 0; // 对于 Safari
-	        document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
 	    };
     function toggleDetails(id) {
         var details = document.getElementById(id);
@@ -116,27 +88,5 @@
             <p>&copy; 2024 李子贺. 保留所有权利。</p>
         </div>
     </footer>
-<!-- 	<button id="scrollToTop" class="scrollToTop">返回顶部</button> -->
-	<script>
-    // 粒子数量
-    const particleCount = 100;
-    const container = document.createElement("div");
-    container.className = "particle-container";
-    document.body.appendChild(container);
-
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement("div");
-        particle.className = "particle";
-        
-        // 随机大小和位置
-        particle.style.width = `${Math.random() * 5 + 2}px`;
-        particle.style.height = particle.style.width;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.animationDuration = `${Math.random() * 20 + 5}s`;
-
-        container.appendChild(particle);
-    }
-</script>
 </body>
 </html>
