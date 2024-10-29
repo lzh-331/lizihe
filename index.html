@@ -6,6 +6,25 @@
     <title>李子贺的个人博客</title>
     <link rel="stylesheet" href="css/style.css">
 	<script>
+		 body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .animated-background {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #feb47b);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 	    // 获取返回顶部按钮
 	    const scrollToTopBtn = document.getElementById('scrollToTop');
 	
@@ -34,6 +53,7 @@
 	</script>
 </head>
 <body>
+	<div class="animated-background"></div>
     <header>
         <div class="container">
             <h1>李子贺的个人博客</h1>
