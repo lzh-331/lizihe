@@ -15,25 +15,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-	<script>
-	    // 当用户滚动时显示按钮
-	    window.onscroll = function() {
-	        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-	            scrollToTopBtn.style.display = "block";
-	        } else {
-	            scrollToTopBtn.style.display = "none";
-	        }
-	    };
-    function toggleDetails(id) {
-        var details = document.getElementById(id);
-        if (details.style.display === "none") {
-            details.style.display = "block";
-        } else {
-            details.style.display = "none";
-        }
-    }
-	</script>
 	<script>
 var _hmt = _hmt || [];
 (function() {
@@ -59,21 +40,6 @@ var _hmt = _hmt || [];
             </nav>
         </div>
     </header>
-	<div id="app">
-    <!-- 这里放置你的 Vue 组件 -->
-  <el-dropdown>
-    <span class="el-dropdown-link">
-      下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
-    </span>
-    <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item>黄金糕</el-dropdown-item>
-      <el-dropdown-item>狮子头</el-dropdown-item>
-      <el-dropdown-item>螺蛳粉</el-dropdown-item>
-      <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-      <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-    </el-dropdown-menu>
-  </el-dropdown>
-  
   <style>
     .el-dropdown-link {
       cursor: pointer;
@@ -137,11 +103,5 @@ var _hmt = _hmt || [];
             <p>&copy; 2024 李子贺. 保留所有权利。</p>
         </div>
     </footer>
-	 <!-- 引入 Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <!-- 引入 Element UI 的 JS -->
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  <!-- 引入你的 main.js 文件 -->
-  <script src="main.js"></script>
 </body>
 </html>
