@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李子贺的个人博客</title>
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 	<script>
 var _hmt = _hmt || [];
 (function() {
@@ -40,6 +40,19 @@ var _hmt = _hmt || [];
             </nav>
         </div>
     </header>
+	<el-dropdown>
+  <span class="el-dropdown-link">
+    下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+  </span>
+  <el-dropdown-menu slot="dropdown">
+    <el-dropdown-item>黄金糕</el-dropdown-item>
+    <el-dropdown-item>狮子头</el-dropdown-item>
+    <el-dropdown-item>螺蛳粉</el-dropdown-item>
+    <el-dropdown-item disabled>双皮奶</el-dropdown-item>
+    <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+  </el-dropdown-menu>
+</el-dropdown>
+
   <style>
     .el-dropdown-link {
       cursor: pointer;
@@ -103,5 +116,32 @@ var _hmt = _hmt || [];
             <p>&copy; 2024 李子贺. 保留所有权利。</p>
         </div>
     </footer>
+	 <!-- 引入 Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- 引入 Element UI 的 JS -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  
+  <!-- Vue 实例 -->
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: '',
+        dialogVisible: false
+      },
+      methods: {
+        showDialog() {
+          this.dialogVisible = true;
+        }
+      }
+    });
+	  .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+  </script>
 </body>
 </html>
