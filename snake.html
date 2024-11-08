@@ -16,16 +16,98 @@
   canvas {
     border: 1px solid #fff;
   }
+  .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
 </style>
 </head>
 <body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>欢迎来到贪吃蛇游戏！</h2>
+        <p>游戏规则：</p>
+        <ul>
+            <li>使用方向键控制蛇的方向。</li>
+            <li>吃到食物后蛇会变长。</li>
+            <li>不要让蛇撞到墙壁或自己的身体。</li>
+        </ul>
+        <button onclick="startGame()">开始游戏</button>
+    </div>
+</div>
 <canvas id="gameCanvas"></canvas>
 <script>
+  var modal = document.getElementById("myModal");
+
+    // 获取关闭按钮元素
+    var span = document.getElementsByClassName("close")[0];
+
+    // 当用户点击关闭按钮时，关闭模态框
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // 当用户点击任意位置时，关闭模态框
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // 显示模态框
+    function showStartModal() {
+        modal.style.display = "block";
+    }
+
+    // 开始游戏
+    function startGame() {
+        modal.style.display = "none";
+        // 在这里调用游戏的初始化函数
+        init();
+    }
+
+    // 初始化游戏
+    function init() {
+        // 游戏初始化代码
+        console.log("游戏已开始！");
+    }
+
+    // 页面加载完成后显示模态框
+    window.onload = showStartModal;
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 800;
-canvas.height = 800;
+canvas.width = 1000;
+canvas.height = 1000;
 
 const scale = 20;
 const rows = Math.floor(canvas.height / scale);
