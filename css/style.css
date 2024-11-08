@@ -153,7 +153,7 @@ footer {
 }
 /* 小游戏模块按钮 */
 .simple-button {
-    background-color: #4CAF50; /* 绿色背景 */
+    background-color: #ede7f0; /* 绿色背景 */
     border: none;               /* 无边框 */
     color: white;               /* 白色文字 */
     padding: 15px 32px;         /* 内边距 */
@@ -169,5 +169,5 @@ footer {
 .simple-button:hover {
     background-color: white;    /* 悬停时背景变白 */
     color: black;               /* 悬停时文字变黑 */
-    border: 2px solid #4CAF50;  /* 悬停时添加绿色边框 */
+    border: 2px solid #ede7f0;  /* 悬停时添加绿色边框 */
 }
