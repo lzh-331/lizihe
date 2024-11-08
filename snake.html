@@ -36,6 +36,7 @@ let snake = [];
 let direction;
 let food;
 let gameOver = false;
+let gameInterval;
 
 init();
 
@@ -45,7 +46,14 @@ function init() {
   direction = { x: 0, y: 0 };
   gameOver = false;
   document.addEventListener('keydown', changeDirection);
-  setInterval(gameLoop, 100);
+  startGameLoop();
+}
+
+function startGameLoop() {
+  if (gameInterval) {
+    clearInterval(gameInterval);
+  }
+  gameInterval = setInterval(gameLoop, 100);
 }
 
 function gameLoop() {
