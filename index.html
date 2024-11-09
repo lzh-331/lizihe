@@ -13,24 +13,6 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-		var x=document.getElementById("demo");
-function getLocation()
-{
-	if (navigator.geolocation)
-	{
-		navigator.geolocation.getCurrentPosition(showPosition);
-	}
-	else
-	{
-		x.innerHTML="该浏览器不支持获取地理位置。";
-	}
-}
-
-function showPosition(position)
-{
-	x.innerHTML="纬度: " + position.coords.latitude + 
-	"<br>经度: " + position.coords.longitude;	
-}
 </script>
 </head>
 <body>
@@ -87,7 +69,7 @@ function showPosition(position)
 	<div class="container" style="background-color: gainsboro;">
 	  <h2 style="text-align: center;">小游戏</h2>
 	  <a href="snake.html">
-	     <button class="simple-button">贪吃蛇（PC）</button></a>
+	     <button class="simple-button">贪吃蛇（仅支持PC）</button></a>
 	</section> 
 </div>
     <section id="contact">
@@ -96,8 +78,6 @@ function showPosition(position)
             <p>GitHub: <a href="https://github.com/lzh-331" target="_blank">github.com/lzh-331</a></p>
             <p>邮箱: <a href="mailto:lizihe0331@163.com">lizihe0331@163.com</a></p>
             <p>微信: jVING9</p>
-	    <p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
-    <button onclick="getLocation()">点我</button>
         </div>
     </section>
     <footer>
