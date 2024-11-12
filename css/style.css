@@ -3,14 +3,21 @@
     padding: 0px;
     list-style: none;
 }
- 
+
+html {
+    font-size: 110%;
+}
+
 body {
+    margin: 0;
     background-color: #4B7C99;
+    font-size: 1rem;
 }
  
 #bigbox {
-    width: 1000px;
+    width: 500px;
     margin: 0 auto;
+    padding: 10px;
 }
  
 #banner {
@@ -19,7 +26,7 @@ body {
 }
  
 #banner img {
-    width: 1000px;
+    width: 100%;
     height: 500px;
 }
  
@@ -27,6 +34,9 @@ nav {
     background-color: #CCD0D9;
     width: 1000px;
     height: 60px;
+    display: flex;
+    justify-content: space-around; /* 水平分布导航链接 */
+    margin: 10px 0;
 }
  
 nav a {
@@ -240,4 +250,8 @@ button {
         .map {
             margin-top: 20px;
         }
- 
+img {
+    max-width: 100%; /* 使图片宽度自适应 */
+    height: auto; /* 保持图片比例 */
+}
+        
