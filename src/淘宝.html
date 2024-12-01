@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网购界面示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+s
+        .header {
+            background-color: #ffa726;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .search-bar input {
+            width: 270px;
+            padding: 5px;
+            border: 2px solid orange;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            width: 45px;
+            padding: 5px;
+            background-color: orange;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .search-bar img{
+            float: left;
+            width: 50px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        .navbar {
+            display: flex;
+            overflow: hidden;
+            padding: 1px;
+            background-color: white;
+            position: relative;
+            touch-action: pan-x;  /* 允许横向滚动 */
+        }
+
+        .navbar div {
+            min-width: 60px;
+            text-align: center;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+
+        .content {
+            padding: 1px;
+        }
+
+        .product {
+            background-color: white;
+            margin: 1px 0;
+            padding: 5px;
+            border-radius: 2px;
+        }
+        .underline{
+            color: orange;
+            text-decoration: underline;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .price p{
+            color: orange;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: right;
+            margin: 1px 0;
+        }
+        .price h5{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .price button{
+            background-color: orange;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #898989; 
+            text-align: center; 
+            padding: 10px; 
+            color: white; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01FhxixQ1Qbl8pNLho6_!!6000000001995-2-tps-412-224.png" alt="logo">
+        <input type="text" placeholder="搜索商品">
+        <button>搜索</button>
+    </div>
+
+    <div class="navbar" id="navbar">
+        <div>关注</div>
+        <div class="underline">推荐</div>
+        <div>小时达</div>
+        <div>焕新衣</div>
+        <div>居家</div>
+        <div>美食</div>
+        <div>穿搭</div>
+        <div>数码</div>
+        <div>母婴</div>
+    </div>
+
+    <div class="content">
+        <div class="product">
+            <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2206584264218/O1CN01Ii78Gq1h1tcBckpyy_!!2206584264218-0-C2M.jpg_580x580q90.jpg_.webp" alt="图片">
+            <div class="price">
+            <h5>2024秋冬新款烟黑色牛仔裤男士</h5>
+            <button>加入购物车</button>
+            <p>¥199.00</p>
+            </div>     
+    
+        <div class="product">
+            <img src="http://img.alicdn.com/img/i4/51455730/O1CN01VHpeW61sCORUUV5pG_!!0-saturn_solar.jpg_580x580q90.jpg_.webp" alt="图片">
+            <div class="price">
+            <h5>2024休闲运动套装男士</h5>
+            <button>加入购物车</button>
+            <p>¥168.00</p>
+            </div>     
+    
+        <div class="product">
+            <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/3791857990/O1CN01oSxHHB28tTScWHd02_!!0-item_pic.jpg_580x580q90.jpg_.webp" alt="图片">
+            <div class="price">
+            <h5>牛仔裤男士秋冬黑色美式男款</h5>
+            <button>加入购物车</button>
+            <p>¥68.00</p>
+            </div>     
+    
+        <div class="product">
+            <img src="http://img.alicdn.com/img/i3/45446667/O1CN01RkT3oV1z7XNu5yEms_!!0-saturn_solar.jpg_580x580q90.jpg_.webp" alt="图片">
+            <div class="price">
+            <h5>男士外套春秋冬季2024新款假两件休闲加厚夹克</h5>
+            <button>加入购物车</button>
+            <p>¥98.00</p>
+            </div>     
+    </div>
+
+    <h3 >没有更多咯~</h3>
+
+    <footer class="footer">
+        © 2024 淘宝
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        let startX;
+
+        navbar.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;  // 记录起始位置
+        });
+
+        navbar.addEventListener('touchmove', (e) => {
+            const currentX = e.touches[0].clientX;  // 记录当前手指位置
+            const diffX = startX - currentX; // 计算滑动差距
+            navbar.scrollLeft += diffX; // 根据差值滚动
+            startX = currentX; // 更新起始位置
+        });
+    </script>
+</body>
+</html>
