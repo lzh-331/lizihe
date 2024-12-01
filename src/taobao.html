@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淘宝</title>
+    <title>网购界面示例</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@ s
         }
 
         .search-bar input {
-            width: 270px;
+            width: 260px;
             padding: 5px;
             border: 2px solid orange;
             border-radius: 5px;
@@ -85,6 +85,7 @@ s
             text-decoration: underline;
         }
         img {
+            margin-top: 15px;
             width: 100%;
             height: auto;
         }
@@ -114,13 +115,21 @@ s
             bottom: 0; 
             width: 100%;
         }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover{
+            color: orange;
+        }
+
     </style>
 </head>
 <body>
     <div class="search-bar">
-        <img src="https://img.alicdn.com/imgextra/i3/O1CN01FhxixQ1Qbl8pNLho6_!!6000000001995-2-tps-412-224.png" alt="logo">
+        <img src="https://img.alicdn.com/imgextra/i3/O1CN01FhxixQ1Qbl8pNLho6_!!6000000001995-2-tps-412-224.png" alt="logo" >
         <input type="text" placeholder="搜索商品">
-        <button>搜索</button>
+        <button onclick="button()">搜索</button>
     </div>
 
     <div class="navbar" id="navbar">
@@ -137,58 +146,70 @@ s
 
     <div class="content">
         <div class="product">
-            <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2206584264218/O1CN01Ii78Gq1h1tcBckpyy_!!2206584264218-0-C2M.jpg_580x580q90.jpg_.webp" alt="图片">
-            <div class="price">
-            <h5>2024秋冬新款烟黑色牛仔裤男士</h5>
-            <button>加入购物车</button>
+            <a href="https://detail.tmall.com/item.htm?spm=a21n57.1.item.2.56b4523cDezg1T&priceTId=2150419117330616752578855e1c1b&utparam=%7B%22aplus_abtest%22%3A%222b4b6fe1e7c14f41da77adad68ec7deb%22%7D&id=825525452981&ns=1&abbucket=19&xxc=taobaoSearch&skuId=5717661118045&pisk=fQFmKP6ms-kXCEvorTlfQ1eh1i6JcEGshldtXfnNU0oWMAoOhlDgXuMaMjUYqcrLjVFY652Wsya_MZGOljaj1fSdv6hglrGso7qztSAyaqUygnu2mrlXufSdv1vJzxsx_oh_X5uyU2iruVkZbaYrkVcZuqkVr0uiRd-4blzPrVuKbCRq3z5r8VGwbAu2aYuK8Kuw3ClPrVir7jaFumEbv7SAhGnUwmqbZqDPerozN7btkxDzo0jFv7fInDzqqCjLSgimj0NF2T47b-rxPlfhqXyQq5DEssxIo8znamhFKLc0yoNngWjDM4Him8PqEFRa8roSLRqcmKi4HuDIzY8GO4EK4rN4ENtzuknmg4kRTw4rQ8FjdSIyiXyQkjeaYgpx0J0N4FvyLzC6147Tad9s34govGLWnM04SIpdravECxuSl_blrd9s34govabkLrMqPq1l." target="_blank">
+                <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2206584264218/O1CN01Ii78Gq1h1tcBckpyy_!!2206584264218-0-C2M.jpg_580x580q90.jpg_.webp" alt="图片">
+            <div class="price" >
+            <h5>2024秋冬新款烟黑色牛仔裤男士</h5></a> 
+            <button onclick="button()">加入购物车</button>
             <p>¥199.00</p>
-            </div>     
+            </div>    
     
         <div class="product">
+            <a href="https://detail.tmall.com/item.htm?id=827988990557&ns=1&pisk=fVBtLO13_y4ggTiK9jNHoK5kMpqHBtIaSNSSnEYiGwQdceD0bdV2HZLduFAMCFDvHiQVoZI4bnTflZLcsW2lbGJ2hzYYE8jZqD3TFNL61DZXqn3bBJV3fGJ2hrnnh72Rba6ChAK6cHZpmnxj1ZOsdptDRhgj1ZTBO3to5K_XhkpB2nhjlAOXOXtvRqtjCfiIAhx9lftsCkIB83hmCfLqgEMAiv_BCvlbwWPFpHa2PGhrUh69X-YRXeU789Hy6Us6JxUlDy89keW7-WIFl1_MYZe8JL1PJtdWHR3yX6sJdFv7wXpOxNWJCTUtIHAvW6669mMfVGTeNsQTWf81swdyABiYUHbkRGW19ouCfaY9CHO3FuIBG6XwaO4IBL1PjdffPycM5_Kf4dXleOdErUKm1kEKgjR6YEjNQCn4k2kevUqhxjl2t7tprkEKgjR6YHLuxUcqgBV5.&priceTId=2147bfbf17330416665632056e1d86&skuId=5723799554863&spm=a21n57.1.item.5.5bc2523cQRQYcz&utparam=%7B%22aplus_abtest%22%3A%22e9d3b808ffe77d46755cd1b3bf720cc9%22%7D&xxc=ad_ztc" target="_blank">
             <img src="http://img.alicdn.com/img/i4/51455730/O1CN01VHpeW61sCORUUV5pG_!!0-saturn_solar.jpg_580x580q90.jpg_.webp" alt="图片">
             <div class="price">
-            <h5>2024休闲运动套装男士</h5>
-            <button>加入购物车</button>
+            <h5>2024休闲运动套装男士</h5></a>
+            <button onclick="button()">加入购物车</button>
             <p>¥168.00</p>
             </div>     
     
         <div class="product">
+            <a href="https://detail.tmall.com/item.htm?abbucket=6&id=680140493964&ns=1&pisk=fs2xL_VlgabDJmKJwC1oSAPn6YjoDREVorrBIV0D1zU8f4vG0xfZBP387qcmhqvtBlUaSPEN0cg_5P3gi_X30okZCw0OK9q2x3LAdrnXG3ssxc9fHTflcokZCNKkC6XL0yw7CBnjf0s-jcm6GPGXFYiiPcijCPgSNDiHlAasCgHSvcd65KGsNQitPCTsCji7VDovhnis5gESzcGvVI3w_V9TsLaShLWfNw7Ue0_ZRoCMFcyqDj3Lc-p23GoxM2ZjPw52gxh7bfewbdhQcWzZArTfWVy8V-NQRaAmlWnTx5EfhLM03oNI1J_w1yHYWXwjwh9xFYuxe0wCjBuueq4_HbsHpfD7KXMbZ_7msxnL5-zvXdaQqk2qaRQpPVPmYYiTQMOtWfsyjJ2LHb8nJcAf2gdw_jirSoyqMh79zLo--gqk_CllO03h2gdw_jir22jo-CRZZ61..&priceTId=2147bfbf17330416665632056e1d86&skuId=5299619658549&spm=a21n57.1.item.6.5bc2523cQRQYcz&utparam=%7B%22aplus_abtest%22%3A%223382549f55870b4569af76d3cb7d867b%22%7D&xxc=taobaoSearch" target="_blank">
             <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/3791857990/O1CN01oSxHHB28tTScWHd02_!!0-item_pic.jpg_580x580q90.jpg_.webp" alt="图片">
             <div class="price">
-            <h5>牛仔裤男士秋冬黑色美式男款</h5>
-            <button>加入购物车</button>
+            <h5>牛仔裤男士秋冬黑色美式男款</h5></a> 
+            <button onclick="button()">加入购物车</button>
             <p>¥68.00</p>
-            </div>     
+            </div>    
     
         <div class="product">
+            <a href="https://detail.tmall.com/item.htm?id=701907972434&ns=1&pisk=f7mrL2fST3KrII-CA8rF0Lw8zLr8ouA64DNQKvD3F7VuNv23YjcBe7MHwXoUiv3WeyORLTnq_MsWwUHhYkZH1Ct6fYH7vkA16OgXI_egBwxQEaDDNtqecCt6fx8uekMD10GL3Cw_CMq3ry4cmSeFr84otrj0pSjuKg2hiKPYKk2uKzbcnR2QKw4ntsD0d8PhZajuo-23IkVntkcxZkqO1R4kBTkl88tRdvNiE7DSemv7VaHUg3KS0qrYshNVxMm4ExalGrSwR50TNPNEinszYx2EgPgy_glEKA33uD5kFfcm8X2xkB7U_2DSW242E3D447z4UzBhzuunwDz-z9ptnucxW5UkkIeqVcaU6r5DZxM4ZPuENII3NVkmgPifGGZiWjoUSljPM6emyUiKz6bUr-e41KJVKK1jgrloVL_dJzBY3598-wQLr-e41KJVJwUJ6-P6eyf..&priceTId=2147bfbf17330416665632056e1d86&skuId=5255921898410&spm=a21n57.1.item.11.5bc2523cQRQYcz&utparam=%7B%22aplus_abtest%22%3A%2250da8ad80f0e001d81a404e808e937c4%22%7D&xxc=ad_ztc" target="_blank">
             <img src="http://img.alicdn.com/img/i3/45446667/O1CN01RkT3oV1z7XNu5yEms_!!0-saturn_solar.jpg_580x580q90.jpg_.webp" alt="图片">
             <div class="price">
-            <h5>男士外套春秋冬季2024新款假两件休闲加厚夹克</h5>
-            <button>加入购物车</button>
+            <h5>男士外套春秋冬季2024新款假两件休闲加厚夹克</h5></a>
+            <button onclick="button()">加入购物车</button>
             <p>¥98.00</p>
             </div>     
     </div>
+    <p style="text-align: center;">没有更多咯~</p>
 
-    <h3 >没有更多咯~</h3>
-
-    <footer class="footer">
-        © 2024 淘宝
-    </footer>
+    <div style="background-color:gainsboro;text-align: center;">
+    <p>
+        <div><a href="https://huodong.taobao.com/wow/tbhome/act/about-home">关于淘宝</a></div>
+        <div><a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201703241622_61002.html?">隐私权政策</a></div>
+        <div><a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201811121436_80276.html?">法律声明</a></div>
+        <div><a href="https://ipp.taobao.com/">知识产权</a></div>
+        <div><span>© 2003-现在 Taobao.com 版权所有</span></div>
+    </p>
+    </div>    
 
     <script>
         const navbar = document.getElementById('navbar');
         let startX;
 
         navbar.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;  // 记录起始位置
+            startX = e.touches[0].clientX; 
         });
 
         navbar.addEventListener('touchmove', (e) => {
-            const currentX = e.touches[0].clientX;  // 记录当前手指位置
-            const diffX = startX - currentX; // 计算滑动差距
-            navbar.scrollLeft += diffX; // 根据差值滚动
-            startX = currentX; // 更新起始位置
+            const currentX = e.touches[0].clientX;  
+            const diffX = startX - currentX;
+            navbar.scrollLeft += diffX;
+            startX = currentX; 
         });
+        function button() {
+            window.location.href = "https://login.taobao.com/member/login.jhtml?redirectURL=https%3A%2F%2Fi.taobao.com%2Fmy_itaobao%3Fspm%3Da21t4m.27981689.1997525045.1.3d7e11d9dBtYvq"; 
+        }
     </script>
 </body>
 </html>
