@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>淘宝界面示例</title>
+    <title>网购界面示例</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@ s
         }
 
         .search-bar input {
-            width: 260px;
+            width: 270px;
             padding: 5px;
             border: 2px solid orange;
             border-radius: 5px;
@@ -64,9 +64,9 @@ s
         }
 
         .navbar div {
-            min-width: 60px;
+            min-width: 57px;
             text-align: center;
-            padding: 3px;
+            padding: 1px;
             flex-shrink: 0;
         }
 
@@ -106,6 +106,13 @@ s
             color: white;
             border-radius: 10px;
         }
+        .price text{
+            text-align: right;
+            /* display: block; */
+            margin-left: 15px;
+            font-size: 16px;
+            color: #a4a1a1;
+        }
         .footer {
             background-color: #898989; 
             text-align: center; 
@@ -133,16 +140,17 @@ s
     </div>
 
     <div class="navbar" id="navbar">
-        <div>关注</div>
-        <div class="underline">推荐</div>
-        <div>小时达</div>
-        <div>焕新衣</div>
-        <div>居家</div>
-        <div>美食</div>
-        <div>穿搭</div>
-        <div>数码</div>
-        <div>母婴</div>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>关注</div></a>
+        <a href="#" return false;"><div class="underline">推荐</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>小时达</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>焕新衣</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>居家</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>美食</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>穿搭</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>数码</div></a>
+        <a href="#" onclick="window.open('', '_blank'); return false;"><div>母婴</div></a>
     </div>
+    
 
     <div class="content">
         <div class="product">
@@ -151,6 +159,7 @@ s
             <div class="price" >
             <h5>2024秋冬新款烟黑色牛仔裤男士</h5></a> 
             <button onclick="button()">加入购物车</button>
+            <text>已售 1300+</text>
             <p>¥199.00</p>
             </div>    
     
@@ -160,6 +169,7 @@ s
             <div class="price">
             <h5>2024休闲运动套装男士</h5></a>
             <button onclick="button()">加入购物车</button>
+            <text>已售 1000+</text>
             <p>¥168.00</p>
             </div>     
     
@@ -169,6 +179,7 @@ s
             <div class="price">
             <h5>牛仔裤男士秋冬黑色美式男款</h5></a> 
             <button onclick="button()">加入购物车</button>
+            <text>已售 1000+</text>
             <p>¥68.00</p>
             </div>    
     
@@ -178,6 +189,7 @@ s
             <div class="price">
             <h5>男士外套春秋冬季2024新款假两件休闲加厚夹克</h5></a>
             <button onclick="button()">加入购物车</button>
+            <text>已售 1000+</text>
             <p>¥98.00</p>
             </div>     
     </div>
@@ -196,20 +208,37 @@ s
     <script>
         const navbar = document.getElementById('navbar');
         let startX;
-
+    
         navbar.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX; 
+            startX = e.touches[0].clientX;
         });
-
+    
         navbar.addEventListener('touchmove', (e) => {
-            const currentX = e.touches[0].clientX;  
+            const currentX = e.touches[0].clientX;
             const diffX = startX - currentX;
             navbar.scrollLeft += diffX;
-            startX = currentX; 
+            startX = currentX;
         });
+    
         function button() {
             window.location.href = "https://login.taobao.com/member/login.jhtml?redirectURL=https%3A%2F%2Fi.taobao.com%2Fmy_itaobao%3Fspm%3Da21t4m.27981689.1997525045.1.3d7e11d9dBtYvq"; 
         }
+    
+        const searchInput = document.querySelector('.search-bar input');
+        const productElements = document.querySelectorAll('.product');
+    
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            productElements.forEach(product => {
+                const productName = product.querySelector('h5').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
     </script>
+    
 </body>
 </html>
